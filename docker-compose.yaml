@@ -1,0 +1,15 @@
+version: "3"
+services: 
+    app:
+      build: ./
+      ports: 
+        - "8000:8000"
+    db:
+      image: mysql:5.7
+      environment: 
+        MYSQL_ROOT_PASSWORD: password
+        MYSQL_DATABASE: web_api_new 
+        MYSQL_USER: maul
+        MYSQL_PASSWORD: maul
+      ports: 
+        - "3306:3306"
